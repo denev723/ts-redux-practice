@@ -78,6 +78,7 @@ const initialState: CounterState = {
 
 // createReducer는 리듀서를 쉽게 만들 수 있게 해주는 함수
 // Generics로 리듀서에서 관리할 상태, 리듀서에서 처리할 모든 액션 객체 타입을 넣어야 함
+
 const counter = createReducer<CounterState, CounterAction>(initialState, {
   [INCREASE]: (state) => ({ count: state.count + 1 }),
   [DECREASE]: (state) => ({ count: state.count - 1 }),
